@@ -1,0 +1,122 @@
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu .container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* Base Tab */
+.menu-tab {
+  position: relative;
+  padding: 0.6rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid rgba(93, 64, 55, 0.25);
+  background: #fdf8f4; /* warm cream */
+  color: #5d4037;      /* coffee brown */
+  cursor: pointer;
+  transition: 
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Hover */
+.menu-tab:hover {
+  background: rgba(211, 84, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Active Tab */
+.menu-tab.active {
+  background: linear-gradient(
+    135deg,
+    #d35400,
+    #e67e22
+  );
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 10px 25px rgba(211, 84, 0, 0.35);
+}
+
+/* Active underline accent */
+.menu-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 14px;
+  height: 4px;
+  background: #d35400;
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+
+/* Pressed state */
+.menu-tab:active {
+  transform: scale(0.96);
+}
+
+/* Grid */
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+/* Card */
+.menu-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  max-width: 320px;
+  width: 100%;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-card-content {
+  padding: 1rem;
+}
+
+.menu-card-content h3 {
+  margin: 0 0 0.3rem;
+}
+
+.menu-card-content p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.menu-price {
+  display: block;
+  margin-top: 0.6rem;
+  font-weight: bold;
+  color: #d35400;
+}

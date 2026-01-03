@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import siteConfig from '../config/siteConfig';
+import '../styles/navbar.css'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

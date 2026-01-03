@@ -1,0 +1,20 @@
+.hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-image {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(61, 40, 40);
+    position: absolute;
+}
+
+.hero .kotakan-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
