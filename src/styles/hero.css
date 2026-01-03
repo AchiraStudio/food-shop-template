@@ -11,6 +11,10 @@
     position: absolute;
 }
 
+.hero .hero-content h1 {
+    margin-bottom: 480px;
+}
+
 .hero .kotakan-img {
     height: 100%;
     width: 100%;

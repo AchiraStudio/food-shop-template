@@ -20,7 +20,7 @@ const siteConfig = {
   
   // Hero Section
   hero: {
-    headline: "Temukan Kenikmatan Kopi di",
+    headline: "Temukan Kenikmatan Kopi",
     subheadline: "Tempat sempurna untuk bersantai, ngopi, dan menikmati pemandangan danau.",
     ctaText: "Lihat Menu",
     ctaLink: "#menu",
