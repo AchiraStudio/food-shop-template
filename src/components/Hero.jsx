@@ -23,8 +23,8 @@ const Hero = () => {
               <a href={siteConfig.hero.ctaLink} className="btn btn-primary">
                 {siteConfig.hero.ctaText}
               </a>
-              <a href="#menu" className="btn btn-secondary">
-                Explore Menu
+              <a href="#reviews" className="btn btn-secondary">
+                Reviews
               </a>
             </div>
           </div>

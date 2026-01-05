@@ -69,11 +69,11 @@ const Navbar = () => {
               ))}
             </ul>
             
-            <div className="navbar-cta">
+            {/* <div className="navbar-cta">
               <a href="#contact" className="btn btn-primary" onClick={closeMobileMenu}>
                 Hubungi Kami
               </a>
-            </div>
+            </div> */}
           </div>
           
           <button 
