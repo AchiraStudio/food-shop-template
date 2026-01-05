@@ -1,23 +1,45 @@
+// src/components/Hero.jsx
 import React from 'react';
 import siteConfig from '../config/siteConfig';
-import '../styles/hero.css'
+import '../styles/hero.css';
 
 const Hero = () => {
   return (
     <section id="home" className="hero">
-      <div className="hero-overlay"></div>
-      <div className="container">
-        <div className="hero-image">
-          <div className="kotakan-img">
-            <img src="images/kotakan.png" alt="" />
+      <div className="hero-background">
+        <div className="hero-gradient"></div>
+      </div>
+      
+      <div className="hero-container">
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1 className="hero-title">
+              {siteConfig.hero.headline}
+            </h1>
+            <p className="hero-subtitle">
+              {siteConfig.hero.subheadline}
+            </p>
+            <div className="hero-cta">
+              <a href={siteConfig.hero.ctaLink} className="btn btn-primary">
+                {siteConfig.hero.ctaText}
+              </a>
+              <a href="#menu" className="btn btn-secondary">
+                Explore Menu
+              </a>
+            </div>
+          </div>
+          
+          <div className="hero-image">
+            <div className="image-container">
+              <img src="images/kotakan.png" alt="Kotakan Cafe" className="hero-img" />
+              <div className="image-decoration"></div>
+            </div>
           </div>
         </div>
-        <div className="hero-content">
-          <h1>{siteConfig.hero.headline}</h1>
-          <p>{siteConfig.hero.subheadline}</p>
-          <a href={siteConfig.hero.ctaLink} className="btn btn-primary">
-            {siteConfig.hero.ctaText}
-          </a>
+        
+        <div className="scroll-indicator">
+          <span className="scroll-text">Scroll Down</span>
+          <div className="scroll-arrow"></div>
         </div>
       </div>
     </section>

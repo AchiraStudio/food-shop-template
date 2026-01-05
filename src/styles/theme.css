@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
 /* Theme Variables - Warna sekarang diambil dari siteConfig.js */
 :root {
   --primary-color: #d35400; /* Oranye Hangat - Sesuaikan di siteConfig.js */
@@ -19,7 +21,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Zalando Sans", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -74,51 +76,6 @@ section {
 .btn-primary:hover {
   background-color: #c14700;
   transform: translateY(-2px);
-}
-
-/* Hero Section */
-.hero {
-  height: 100vh;
-  /* Pastikan path gambar benar dan gambar ada di folder tersebut */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/hero-image.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: var(--light-text);
-  position: relative;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Menu Section */

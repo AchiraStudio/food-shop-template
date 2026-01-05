@@ -1,6 +1,17 @@
+// src/components/Footer.jsx
 import React from 'react';
 import siteConfig from '../config/siteConfig';
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
+import '../styles/footer.css';
+
+const getIcon = (name) => {
+  switch (name) {
+    case 'Instagram': return <FaInstagram />;
+    case 'Tiktok': return <FaTiktok />;
+    case 'Facebook': return <FaFacebookF />;
+    default: return null;
+  }
+};
 
 const Footer = () => {
   return (
@@ -27,8 +38,8 @@ const Footer = () => {
             <h4>Ikuti Kami</h4>
             <div className="social-links">
               {siteConfig.footer.socialLinks.map((link, index) => (
-                <a key={index} href={link.href} target="_blank" rel="noopener noreferrer">
-                  {link.name}
+                <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
+                  {getIcon(link.name)}
                 </a>
               ))}
             </div>

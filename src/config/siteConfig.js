@@ -9,19 +9,21 @@ const siteConfig = {
   // Theme Colors - Disesuaikan dengan vibe Kotakan Cafe (hangat, earthy)
   primaryColor: "#d35400", // Oranye hangat
   secondaryColor: "#5d4037", // Coklat kopi
+  accentColor: "#f9f9f9", // Light background
   
   // Navigation Links
   navLinks: [
     { name: "Beranda", href: "#home" },
     { name: "Menu", href: "#menu" },
     { name: "Tentang", href: "#about" },
+    { name: "Ulasan", href: "#reviews" },
     { name: "Kontak", href: "#contact" }
   ],
   
   // Hero Section
   hero: {
-    headline: "Temukan Kenikmatan Kopi",
-    subheadline: "Tempat sempurna untuk bersantai, ngopi, dan menikmati pemandangan danau.",
+    headline: "Temukan Kenikmatanmu",
+    subheadline: "Tempat sempurna untuk bersantai, ngopi, dan menikmati pemandangan kota.",
     ctaText: "Lihat Menu",
     ctaLink: "#menu",
     // !!! PENTING: Ganti dengan foto hero Kotakan Cafe
@@ -55,7 +57,7 @@ const siteConfig = {
           image: "/images/menu/saigon-rice.jpg"
         },
         {
-          name: "Fried N’ Fresh",
+          name: "Fried N' Fresh",
           price: "Rp 20.000",
           description:
             "Fried chicken klasik dengan lettuce dan nasi",
@@ -135,11 +137,15 @@ const siteConfig = {
   // About Section
   about: {
     title: "Tentang Kami",
-    text: "Kotakan Cafe hadir sebagai tempat peristirahatan bagi Anda yang mencari ketenangan di tengah hiruk pikuk kesibukan. Dengan konsep bangunan kontainer yang unik dan lokasi strategis di tepi danau, kami menawarkan pengalaman ngopi yang berbeda. Kami percaya bahwa secangkir kopi yang baik dapat memulai percakapan yang baik dan menciptakan momen tak terlupakan bersama teman dan kerabat."
+    text: "Kotakan Cafe hadir sebagai tempat peristirahatan bagi Anda yang mencari ketenangan di tengah hiruk pikuk kesibukan. Dengan konsep bangunan kontainer yang unik dan lokasi strategis di tepi danau, kami menawarkan pengalaman ngopi yang berbeda. Kami percaya bahwa secangkir kopi yang baik dapat memulai percakapan yang baik dan menciptakan momen tak terlupakan bersama teman dan kerabat.",
+    // !!! PENTING: Ganti dengan foto tentang Kotakan Cafe
+    imagePath: "/images/about-kotakan.jpg",
+    ctaText: "Hubungi Kami"
   },
 
-  // Reviews
+  // Reviews Section
   reviews: {
+    title: "Apa Kata Mereka",
     subtitle: "Ulasan jujur dari pelanggan Kotakan Cafe",
     maxCharacters: 140,
     items: [
@@ -147,29 +153,32 @@ const siteConfig = {
         name: "Harvey Fields",
         rating: 5,
         text: "Really all around great food and drinks for a great price! Riceboxes are their specialty and it shows, they are wonderful and incredibly filling and flavorful. The rest of their menu from snacks to coffee was also delicious, Nasi Goreng Kampung specifically is also a must try!",
-        source: "Google Review"
+        source: "Google Review",
+        avatar: "/images/avatar-1.jpg"
       },
       {
         name: "Marthella Sirait",
         rating: 5,
         text: "My favorite is Honey Glazed Chicken, while Papalo likes Korean Spicy, and my son Malo really likes the fries! What makes Kotakan Cafe so fun is that the kids can swim at the same time.",
-        source: "Google Review"
+        source: "Google Review",
+        avatar: "/images/avatar-2.jpg"
       },
       {
         name: "Vinny Novita Sari",
         rating: 5,
         text: "The food is delicious! Those who don't like spicy food should definitely try the Honey Glazed menu; you'll be hooked! The portions are just right, and there's a vegetable salad on the rice. It's a great place to hang out with family or friends.",
-        source: "Google Review"
+        source: "Google Review",
+        avatar: "/images/avatar-3.jpg"
       },
       {
         name: "Rizky Julianawati",
         rating: 5,
         text: "I'm speechless after eating the honey glazed chicken, which is a shocker, it's only 25k more. Don't forget to eat it featuring lychee tea, it's sooo awesome. Plus, it's located at the beach in GDC, so you can take the kids to play in the beautiful water while Mom makes ganyem. I'll definitely be back.",
-        source: "Google Review"
+        source: "Google Review",
+        avatar: "/images/avatar-4.jpg"
       },
     ]
   },
-
   
   // Contact Information
   contact: {
@@ -189,7 +198,7 @@ const siteConfig = {
     socialLinks: [
       { name: "Instagram", href: "https://www.instagram.com/kotakancafe/?hl=en" },
       { name: "Tiktok", href: "https://www.tiktok.com/@kotakancafe" },
-      { name: "Facebook", href: "#" } // Placeholder jika ada
+      // { name: "Facebook", href: "#" } // Placeholder jika ada
     ]
   }
 };
