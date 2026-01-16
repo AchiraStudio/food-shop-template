@@ -57,12 +57,12 @@ const Hero = () => {
           
           <div className="hero-footer">
              <div className="stat-item">
-               <span className="stat-num">4.9</span>
+               <span className="stat-num">4.5+</span>
                <span className="stat-label">Rating</span>
              </div>
              <div className="separator"></div>
              <div className="stat-item">
-               <span className="stat-num">12k+</span>
+               <span className="stat-num">-</span>
                <span className="stat-label">Visitors</span>
              </div>
           </div>
