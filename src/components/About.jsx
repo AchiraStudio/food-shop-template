@@ -31,17 +31,19 @@ const About = () => {
             
             {/* Secondary Detail Image (Floating) */}
             <div className="detail-image-mask">
+              {/* UPDATED: Gambar detail sebaiknya makanan/chef */}
               <img 
-                src="images/coffee-pour.jpg" /* Replace with a detail shot */
+                src="images/food-detail.jpg" 
                 alt="The Craft" 
                 className="detail-img" 
-                onError={(e) => e.target.style.display = 'none'} // Fallback if image missing
+                onError={(e) => e.target.style.display = 'none'} 
               />
             </div>
 
             {/* Decorative Circle Text */}
             <div className="est-circle">
-               <span className="est-year">Est. 2024</span>
+               {/* UPDATED: Tahun pendirian disesuaikan */}
+               <span className="est-year">Est. 2021</span>
             </div>
           </div>
         </div>
@@ -50,18 +52,20 @@ const About = () => {
         <div className="about-content">
           <div className="section-label">03 — The Philosophy</div>
           
+          {/* UPDATED: Title disesuaikan agar lebih umum (bukan cuma architecture/aroma kopi) */}
           <h2 className="about-title">
-            Where <span className="serif-italic">Architecture</span> <br/>
-            Meets <span className="highlight-gold">Aroma.</span>
+            Where <span className="serif-italic">Passion</span> <br/>
+            Meets <span className="highlight-gold">Flavor.</span>
           </h2>
 
           <div className="text-body">
             <p className="lead-paragraph">
-              <span className="drop-cap">K</span>
-              {siteConfig.about.text || "otakan wasn't built just to serve coffee; it was designed to slow down time. We believe that the environment you consume your coffee in is just as vital as the beans themselves."}
+              {/* Drop cap otomatis mengambil huruf pertama dari teks di siteConfig ('K' dari KOTAKAN) */}
+              <span className="drop-cap">{siteConfig.about.text.charAt(0)}</span>
+              {siteConfig.about.text.substring(1)}
             </p>
             <p className="secondary-text">
-              Every corner of our space is intentional. From the rough textures of the walls that ground you, to the carefully curated playlist that uplifts you. We are a sanctuary for the creatives, the dreamers, and the early risers.
+              Kami percaya bahwa makanan enak tidak harus rumit. Setiap Ricebox yang kami sajikan diracik dengan bumbu pilihan untuk menghadirkan kehangatan rasa Asia Tenggara langsung ke tangan Anda.
             </p>
           </div>
 
@@ -72,7 +76,7 @@ const About = () => {
                 <path d="M10 35C10 35 25 15 40 25C55 35 45 45 35 35C25 25 50 10 70 20C90 30 80 40 100 35C120 30 140 10 140 10" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </div>
-            <span className="founder-name">The Founders</span>
+            <span className="founder-name">Laninka Siamiyono</span>
           </div>
 
           <div className="about-actions">

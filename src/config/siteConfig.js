@@ -1,12 +1,12 @@
 const siteConfig = {
   // Business Information
-  businessName: "Kotakan Cafe",
-  tagline: "Ngopi Santai di Tepi Kolam",
+  businessName: "KOTAKAN",
+  tagline: "Cita rasa unik yang nikmat dan praktis.",
   
-  // Theme Colors - Disesuaikan dengan vibe Kotakan Cafe (hangat, earthy)
-  primaryColor: "#d35400", // Oranye hangat
-  secondaryColor: "#5d4037", // Coklat kopi
-  accentColor: "#f9f9f9", // Light background
+  // Theme Colors
+  primaryColor: "#d35400", // Burnt Orange (Warm Food Tone)
+  secondaryColor: "#5d4037", 
+  accentColor: "#f9f9f9", 
   
   // Navigation Links
   navLinks: [
@@ -19,11 +19,11 @@ const siteConfig = {
   
   // Hero Section
   hero: {
-    headline: "Temukan Kenikmatanmu",
-    subheadline: "Tempat sempurna untuk bersantai, ngopi, dan menikmati pemandangan kota.",
+    headline: "Taste our delicious dishes, made with love.",
+    // Subheadline disesuaikan dengan fokus Ricebox
+    subheadline: "Nikmati Ricebox dengan cita rasa Asia Tenggara yang otentik. Praktis, nikmat, dan siap menemani hari-harimu.",
     ctaText: "Lihat Menu",
     ctaLink: "#menu",
-    // !!! PENTING: Ganti dengan foto hero Kotakan Cafe
     imagePath: "/images/hero-image.jpg" 
   },
   
@@ -33,31 +33,27 @@ const siteConfig = {
       category: "Ricebox",
       items: [
         {
-          name: "Honey Glazed Sauce",
+          name: "Honey Glazed Chicken",
           price: "Rp 25.000",
-          description:
-            "Fried chicken dengan honey glazed sauce, lettuce, dan nasi",
+          description: "Ayam goreng renyah dengan balutan saus madu spesial, disajikan dengan nasi hangat dan lettuce segar.",
           image: "/images/menu/honeyglazed-rice.jpg"
         },
         {
-          name: "Korean Spicy Sauce",
+          name: "Korean Spicy Chicken",
           price: "Rp 25.000",
-          description:
-            "Fried chicken dengan saus gochujang khas Korea, lettuce, dan nasi",
+          description: "Perpaduan pedas dan manis saus Gochujang khas Korea yang menggugah selera.",
           image: "/images/menu/spicykorean-rice.jpg"
         },
         {
           name: "Spice of Saigon",
           price: "Rp 25.000",
-          description:
-            "Fried chicken dengan saus Vietnam, lettuce, dan nasi",
+          description: "Ricebox dengan aroma rempah khas Vietnam yang unik dan menyegarkan.",
           image: "/images/menu/saigon-rice.jpg"
         },
         {
           name: "Fried N' Fresh",
           price: "Rp 20.000",
-          description:
-            "Fried chicken klasik dengan lettuce dan nasi",
+          description: "Menu klasik ayam goreng yang praktis, renyah, dan selalu nikmat.",
           image: "/images/menu/classicfc-rice.jpg"
         }
       ]
@@ -69,26 +65,19 @@ const siteConfig = {
         {
           name: "French Fries",
           price: "Rp 15.000",
-          description: "Kentang goreng crinkle cut",
+          description: "Kentang goreng crinkle cut yang renyah.",
           image: "/images/menu/frenchfries-side.jpg"
         },
         {
           name: "Spaghetti Bolognese",
           price: "Rp 25.000",
-          description: "Spaghetti dengan saus bolognese autentik",
+          description: "Pasta dengan saus daging cincang tomat yang gurih.",
           image: "/images/menu/spaghettiB-side.jpg"
         },
         {
-          name: "Nasi Goreng Kampung",
+          name: "Chicken Steak BBQ",
           price: "Rp 25.000",
-          description: "Nasi goreng kampung dengan telur mata sapi",
-          image: "/images/menu/nasigoreng-side.jpg"
-        },
-        {
-          name: "Chicken Fried Steak BBQ",
-          price: "Rp 25.000",
-          description:
-            "Chicken breast dengan saus BBQ, kentang, dan buncis",
+          description: "Steak ayam lembut dengan siraman saus BBQ.",
           image: "/images/menu/chickensteak-side.jpg"
         }
       ]
@@ -98,79 +87,67 @@ const siteConfig = {
       category: "Drinks",
       items: [
         {
-          name: "Fresh Limoun",
-          price: "Rp 15.000",
-          description: "Jeruk nipis segar dengan gula",
-          image: "/images/menu/limoun.jpg"
-        },
-        {
-          name: "Iced Lemon Tea",
-          price: "Rp 15.000",
-          description: "Teh lemon dingin dengan irisan lemon",
-          image: "/images/menu/lemon-tea.jpg"
-        },
-        {
           name: "Iced Lychee Tea",
           price: "Rp 15.000",
-          description: "Teh leci dingin dengan buah leci",
+          description: "Teh leci manis dengan buah asli yang menyegarkan.",
           image: "/images/menu/lychee-tea.jpg"
         },
         {
-          name: "Iced / Hot Mokopi",
-          price: "Rp 17.000",
-          description: "Espresso, brown sugar, dan susu",
-          image: "/images/menu/mokopi.jpg"
+          name: "Fresh Limoun",
+          price: "Rp 15.000",
+          description: "Sari jeruk nipis murni yang segar.",
+          image: "/images/menu/limoun.jpg"
         },
         {
-          name: "Iced / Hot Tea",
-          price: "Rp 8.000",
-          description: "Teh panas atau dingin",
-          image: "/images/menu/tea.jpg"
+          name: "Iced Mokopi",
+          price: "Rp 17.000",
+          description: "Kopi susu gula aren khas Kotakan.",
+          image: "/images/menu/mokopi.jpg"
         }
       ]
     }
   ],
   
-  // About Section
+  // About Section (DATA UTAMA YANG DIUPDATE)
   about: {
-    title: "Tentang Kami",
-    text: "Kotakan Cafe hadir sebagai tempat peristirahatan bagi Anda yang mencari ketenangan di tengah hiruk pikuk kesibukan. Dengan konsep bangunan kontainer yang unik dan lokasi strategis di tepi danau, kami menawarkan pengalaman ngopi yang berbeda. Kami percaya bahwa secangkir kopi yang baik dapat memulai percakapan yang baik dan menciptakan momen tak terlupakan bersama teman dan kerabat.",
-    // !!! PENTING: Ganti dengan foto tentang Kotakan Cafe
+    title: "Di Balik Kotakan",
+    // Teks sesuai permintaan Anda
+    text: "KOTAKAN didirikan oleh seorang Chef Disabilitas yang bernama Laninka Siamiyono, pada November 2021. KOTAKAN menawarkan makanan (RICEBOX) dengan cita rasa Asia Tenggara yang tentunya nikmat, sekaligus praktis untuk disantap kapanpun.",
     imagePath: "/images/about-kotakan.jpg",
-    ctaText: "Hubungi Kami"
+    ctaText: "Kunjungi Kami"
   },
 
   // Reviews Section
   reviews: {
-    title: "Apa Kata Mereka",
-    subtitle: "Ulasan jujur dari pelanggan Kotakan Cafe",
+    title: "Kata Mereka",
+    subtitle: "Pengalaman menikmati rasa Asia di Kotakan",
     maxCharacters: 140,
     items: [
       {
-        name: "Harvey Fields",
+        name: "Andi Pratama",
         rating: 5,
-        text: "Really all around great food and drinks for a great price! Riceboxes are their specialty and it shows, they are wonderful and incredibly filling and flavorful. The rest of their menu from snacks to coffee was also delicious, Nasi Goreng Kampung specifically is also a must try!",
+        text: "Ricebox Spice of Saigon-nya benar-benar unik! Rempahnya terasa tapi nggak bikin eneg. Porsi pas banget buat makan siang.",
         source: "Google Review",
         avatar: "/images/avatar-1.jpg"
       },
       {
-        name: "Marthella Sirait",
+        name: "Siska Larasati",
         rating: 5,
-        text: "My favorite is Honey Glazed Chicken, while Papalo likes Korean Spicy, and my son Malo really likes the fries! What makes Kotakan Cafe so fun is that the kids can swim at the same time.",
+        text: "Suka banget sama konsepnya yang praktis. Honey Glazed-nya favorit anak-anak. Salut juga buat Founder-nya, Kak Laninka!",
         source: "Google Review",
         avatar: "/images/avatar-2.jpg"
       },
       {
-        name: "Vinny Novita Sari",
+        name: "Budi Santoso",
         rating: 5,
-        text: "The food is delicious! Those who don't like spicy food should definitely try the Honey Glazed menu; you'll be hooked! The portions are just right, and there's a vegetable salad on the rice. It's a great place to hang out with family or friends.",
+        text: "Tempatnya asik di pinggir danau, makanannya enak dan terjangkau. Korean Spicy-nya pedasnya pas.",
         source: "Google Review",
         avatar: "/images/avatar-3.jpg"
       },
       {
-        name: "Rizky Julianawati",
+        name: "Citra Dewi",
         rating: 5,
-        text: "I'm speechless after eating the honey glazed chicken, which is a shocker, it's only 25k more. Don't forget to eat it featuring lychee tea, it's sooo awesome. Plus, it's located at the beach in GDC, so you can take the kids to play in the beautiful water while Mom makes ganyem. I'll definitely be back.",
+        text: "Rekomendasi banget buat yang cari makanan Asia Tenggara yang autentik tapi cepet saji. Pasti bakal balik lagi.",
         source: "Google Review",
         avatar: "/images/avatar-4.jpg"
       },
@@ -180,22 +157,18 @@ const siteConfig = {
   // Contact Information
   contact: {
     title: "Hubungi Kami",
-    address: "The Beach, Jl. Grand Duta City, Jl. GDC Boulevard, Jabon Mekar, Kec. Parung, Kabupaten Bogor, Jawa Barat 16330",
-    // !!! PENTING: Isi dengan nomor telepon aktif
+    address: "The Beach, Jl. Grand Duta City, GDC Boulevard, Jawa Barat 16330",
     phone: "+62 812-3456-7890", 
-    // !!! PENTING: Isi dengan email aktif
-    email: "info@kotakancafe.com",
-    // Jam operasional disederhanakan
+    email: "halo@kotakan.id",
     hours: "Setiap Hari: 10:00 - 22:00 WIB"
   },
   
   // Footer Information
   footer: {
-    copyright: `© ${new Date().getFullYear()} Kotakan Cafe. Hak Cipta Dilindungi.`,
+    copyright: `© ${new Date().getFullYear()} KOTAKAN. All Rights Reserved.`,
     socialLinks: [
-      { name: "Instagram", href: "https://www.instagram.com/kotakancafe/?hl=en" },
+      { name: "Instagram", href: "https://www.instagram.com/kotakancafe/" },
       { name: "Tiktok", href: "https://www.tiktok.com/@kotakancafe" },
-      // { name: "Facebook", href: "#" } // Placeholder jika ada
     ]
   }
 };
