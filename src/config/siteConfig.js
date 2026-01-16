@@ -1,6 +1,3 @@
-// Configuration file for Kotakan Cafe
-// Customize these values for each client
-
 const siteConfig = {
   // Business Information
   businessName: "Kotakan Cafe",

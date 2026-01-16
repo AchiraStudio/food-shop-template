@@ -6,95 +6,103 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Handle Scroll Effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  // Prevent body scroll when mobile menu is open
+  // Handle Body Scroll Lock when Menu Open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
-    
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
   }, [isMobileMenuOpen]);
 
   return (
     <>
-      <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+      <nav className={`navbar-section ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
+          
+          {/* Logo / Brand */}
           <div className="navbar-brand">
-            <a href="#home" className="brand-link" onClick={closeMobileMenu}>
-              <img 
-                src="/images/kotakan-logo.png" 
-                alt={`${siteConfig.businessName} Logo`} 
-                className="brand-logo" 
-              />
+            <a href="#home" className="brand-link" onClick={() => setIsMobileMenuOpen(false)}>
+              {/* Option 1: Image Logo (Uncomment if needed) */}
+              {/* <img src="/images/logo.png" alt="Logo" className="brand-img" /> */}
+              
+              {/* Option 2: Typographic Logo (Matches the theme better) */}
+              <span className="brand-text">
+                KOTAKAN<span className="brand-dot">.</span>
+              </span>
             </a>
           </div>
-          
-          <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-            <ul className="nav-list">
+
+          {/* Desktop Navigation */}
+          <div className="navbar-desktop">
+            <ul className="desktop-links">
               {siteConfig.navLinks.map((link, index) => (
-                <li key={index} className="nav-item">
-                  <a 
-                    href={link.href} 
-                    className="nav-link"
-                    onClick={closeMobileMenu}
-                  >
-                    {link.name}
+                <li key={index}>
+                  <a href={link.href} className="link-item">
+                    <span className="link-text">{link.name}</span>
+                    <span className="link-dot"></span>
                   </a>
                 </li>
               ))}
             </ul>
             
-            {/* <div className="navbar-cta">
-              <a href="#contact" className="btn btn-primary" onClick={closeMobileMenu}>
-                Hubungi Kami
-              </a>
-            </div> */}
+            <a href="#reservation" className="cta-btn-modern">
+              Book a Table
+            </a>
           </div>
-          
+
+          {/* Mobile Toggle */}
           <button 
-            className="navbar-toggle" 
-            onClick={toggleMobileMenu}
-            aria-label="Toggle navigation menu"
-            aria-expanded={isMobileMenuOpen}
+            className={`menu-toggle ${isMobileMenuOpen ? 'open' : ''}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle Menu"
           >
-            <div className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+            <span className="bar top"></span>
+            <span className="bar bottom"></span>
           </button>
         </div>
       </nav>
-      
-      {/* Mobile menu overlay */}
-      {isMobileMenuOpen && (
-        <div className="mobile-menu-overlay" onClick={closeMobileMenu}></div>
-      )}
+
+      {/* Full Screen Mobile Overlay */}
+      <div className={`mobile-overlay ${isMobileMenuOpen ? 'active' : ''}`}>
+        {/* Texture */}
+        <div className="noise-overlay"></div>
+        
+        <div className="mobile-content">
+          <ul className="mobile-links">
+            {siteConfig.navLinks.map((link, index) => (
+              <li key={index} style={{ transitionDelay: `${index * 100}ms` }}>
+                <a 
+                  href={link.href} 
+                  className="mobile-link-item"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <span className="mobile-num">0{index + 1}</span>
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mobile-footer">
+            <p className="mobile-address">{siteConfig.contact.address}</p>
+            <div className="mobile-socials">
+              <span>Instagram</span>
+              <span>•</span>
+              <span>TikTok</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

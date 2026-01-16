@@ -7,54 +7,64 @@ const Menu = () => {
   const activeCategory = siteConfig.menuCategories[activeTab];
 
   return (
-    <section id="menu" className="menu">
-      <div className="menu-background">
-        <div className="menu-gradient"></div>
-      </div>
+    <section id="menu" className="menu-section">
+      {/* Texture for continuity */}
+      <div className="noise-overlay"></div>
       
-      <div className="container">
-        <div className="section-header">
-          <h2>Menu Kami</h2>
-          <p>{siteConfig.tagline}</p>
+      <div className="content-container">
+        
+        {/* Header: Editorial Style */}
+        <div className="menu-header">
+          <span className="section-label">02 — Our Offerings</span>
+          <h2 className="menu-title">
+            Curated <span className="accent-italic">Tastes</span>
+          </h2>
+          <p className="menu-description">
+            {siteConfig.tagline || "Ingredients sourced with intention. Flavors crafted with patience."}
+          </p>
         </div>
 
-        {/* Tabs */}
-        <div className="menu-tabs">
+        {/* Categories: Minimalist Text Links */}
+        <div className="category-nav">
           {siteConfig.menuCategories.map((cat, index) => (
             <button
               key={index}
-              className={`menu-tab ${activeTab === index ? 'active' : ''}`}
+              className={`category-btn ${activeTab === index ? 'active' : ''}`}
               onClick={() => setActiveTab(index)}
             >
-              {cat.category}
+              <span className="cat-text">{cat.category}</span>
+              <span className="cat-dot"></span>
             </button>
           ))}
         </div>
 
-        {/* Cards */}
+        {/* Menu Grid */}
         <div className="menu-grid">
           {activeCategory.items.map((item, index) => (
-            <div className="menu-card" key={index}>
-              <div className="menu-card-image-container">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="menu-card-image"
-                />
-                <div className="menu-card-overlay"></div>
+            <div className="menu-card" key={index} style={{ animationDelay: `${index * 100}ms` }}>
+              
+              <div className="card-visual">
+                <div className="arch-frame">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="item-img"
+                  />
+                </div>
+                <div className="price-tag">
+                  {item.price}
+                </div>
               </div>
 
-              <div className="menu-card-content">
-                <div className="menu-card-header">
-                  <h3>{item.name}</h3>
-                  <span className="menu-price">{item.price}</span>
+              <div className="card-details">
+                <div className="item-header">
+                  <h3 className="item-name">{item.name}</h3>
+                  <div className="dotted-line"></div>
                 </div>
-                <p>{item.description}</p>
-                <button className="menu-card-btn">
-                  <span>Pesan Sekarang</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <p className="item-desc">{item.description}</p>
+                
+                <button className="add-btn">
+                  <span>Add to Order</span>
                 </button>
               </div>
             </div>
